@@ -1,0 +1,20 @@
+logging:
+  level: info
+  console: true
+input:
+  - type: "carbon"
+  - type: "pickle"
+store:
+  cluster: "cassandra"
+index:
+  type: "memory"
+api:
+  port: 8080
+engine:
+  rules:
+    default:
+      - "5s:1h"
+      - "10s:14d"
+      - "1m:32d"
+      - "5m:90d"
+      - "1h:365d"
