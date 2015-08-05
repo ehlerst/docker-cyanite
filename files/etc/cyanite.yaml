@@ -3,7 +3,9 @@ logging:
   console: true
 input:
   - type: "carbon"
+    host: 0.0.0.0
   - type: "pickle"
+    host: 0.0.0.0
 store:
   cluster: "cassandra"
 index:
