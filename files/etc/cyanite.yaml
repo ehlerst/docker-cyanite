@@ -14,6 +14,7 @@ index:
   type: empty
 api:
   port: 8080
+  host: 0.0.0.0
 queues:
   defaults:
     ingestq:
