@@ -4,7 +4,7 @@ if [ -f /etc/default/cyanite ]; then
     . /etc/default/cyanite
 fi
 
-cat /opt/cyanite/schema.cql | cqlsh ${CASSANDRA_HOST}
+# cat /opt/cyanite/schema.cql | cqlsh ${CASSANDRA_HOST}
 
 CYANITE_VERSION="0.5.1"
 
