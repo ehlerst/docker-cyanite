@@ -1,0 +1,6 @@
+search_index: /srv/graphite/index
+finders:
+  - cyanite.CyaniteFinder
+cyanite:
+  urls:
+    - http://82.223.7.137:8080
