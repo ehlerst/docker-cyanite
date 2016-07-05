@@ -7,7 +7,8 @@ input:
   - type: "pickle"
     host: 0.0.0.0
 store:
-  cluster: "Openshift Metrics"
+  cluster: "192.168.1.1,192.168.1.2,192.168.1.3"
+  keyspace: "metric"
 index:
   type: "memory"
 api:
