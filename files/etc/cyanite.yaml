@@ -7,7 +7,7 @@ input:
   - type: "pickle"
     host: 0.0.0.0
 store:
-  cluster: "cassandra"
+  cluster: "Openshift Metrics"
 index:
   type: "memory"
 api:
