@@ -16,6 +16,14 @@ index:
   type: "memory"
 api:
   port: 8080
+queues:
+  defaults:
+    ingestq:
+      pool-size: 100
+      queue-capacity: 2000000
+    writeq:
+      pool-size: 100
+      queue-capacity: 2000000
 engine:
   rules:
     default:
@@ -24,3 +32,6 @@ engine:
       - "1m:32d"
       - "5m:90d"
       - "1h:365d"
+logging:
+  level: info
+  console: true
