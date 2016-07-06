@@ -17,6 +17,7 @@ RUN apt-get update && apt-get -qq -y install python-pip python-dev libffi-dev ca
 COPY files/opt/cyanite/ /opt/cyanite/
 
 COPY files/etc/cyanite.yaml /etc/cyanite.yaml
+COPY files/etc/graphite-api.yaml /etc/graphite-api.yaml
 
 RUN pip install graphite-api && \
     pip install cyanite
