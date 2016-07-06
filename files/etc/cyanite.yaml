@@ -1,6 +1,8 @@
 logging:
-  level: info
-  console: true
+  level: debug
+  condole: true
+  files:
+    - "/var/log/supervisor/cyanite-log.log"
 input:
   - type: "carbon"
     host: 0.0.0.0
@@ -31,6 +33,3 @@ engine:
       - "1m:32d"
       - "5m:90d"
       - "1h:365d"
-logging:
-  level: info
-  console: true
