@@ -11,7 +11,7 @@ store:
     - "192.168.1.3"
   keyspace: "metric"
 index:
-  type: empty
+  type: agent
 api:
   port: 8080
   host: 0.0.0.0
