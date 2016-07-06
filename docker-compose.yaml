@@ -1,0 +1,12 @@
+version: 2
+services:
+  cyanite:
+    hostname: cyanite
+    build: .
+    images: greeninja/docker-cyanite
+    ports:
+      - "8080:8080"
+      - "8888:8888"
+      - "2003:2003"
+    environment:
+      MAX_HEAP_SIZE: 512m
