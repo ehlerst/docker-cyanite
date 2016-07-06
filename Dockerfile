@@ -12,7 +12,7 @@ apt-key adv --keyserver pgp.mit.edu --recv-keys EEA14886
 
 RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 
-RUN apt-get update && apt-get -qq -y python-pip python-dev libffi-dev install cassandra oracle-java8-installer oracle-java8-set-default && apt-get clean && rm -rf /var/cache/apt
+RUN apt-get update && apt-get -qq -y install python-pip python-dev libffi-dev cassandra oracle-java8-installer oracle-java8-set-default && apt-get clean && rm -rf /var/cache/apt
 
 COPY files/opt/cyanite/ /opt/cyanite/
 
