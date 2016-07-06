@@ -19,6 +19,7 @@ COPY files/opt/cyanite/ /opt/cyanite/
 COPY files/etc/cyanite.yaml /etc/cyanite.yaml
 COPY files/etc/graphite-api.yaml /etc/graphite-api.yaml
 COPY files/etc/supervisor/conf.d/ /etc/supervisor/conf.d/
+COPY files/etc/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 ADD files/srv /srv
 
 RUN pip install graphite-api && \
