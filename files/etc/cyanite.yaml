@@ -13,7 +13,13 @@ store:
     - "192.168.1.3"
   keyspace: "metric"
 index:
-  type: agent
+  - type: cassandra
+    options:
+      cluster:
+        - "192.168.1.1"
+        - "192.168.1.2"
+        - "192.168.1.3"
+      keyspace: "metric"
 api:
   port: 8080
   host: 0.0.0.0
