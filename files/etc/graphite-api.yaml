@@ -1,10 +1,10 @@
-search_index: /srv/graphite/index
+search_index: site/index
 finders:
   - cyanite.CyaniteFinder
 cyanite:
   urls:
     - http://127.0.0.1:8080
-time_zone: America/New_York
+time_zone: Europe/London
 logging:
   version: 1
   disable_existing_loggers: true
