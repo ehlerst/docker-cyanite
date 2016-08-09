@@ -18,3 +18,12 @@ services:
      - cyanite-cassandra
     links:
      - cyanite-cassandra
+  grafana:
+    hostname: grafana
+    image: grafana/grafana:3.1.0
+    ports: 
+     - "3000:3000"
+    depends_on:
+     - cyanite
+    links:
+     - cyanite
