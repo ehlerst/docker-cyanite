@@ -8,16 +8,12 @@ input:
     host: 0.0.0.0
 store:
   cluster: 
-    - "192.168.1.7"
-    - "192.168.1.8"
-    - "192.168.1.9"
+    - "cyanite-cassandra"
   keyspace: "metric"
 index:
   type: cassandra
   cluster:
-    - "192.168.1.7"
-    - "192.168.1.8"
-    - "192.168.1.9"
+    - "cyanite-cassandra"
   keyspace: "metric"
 api:
   port: 8080
