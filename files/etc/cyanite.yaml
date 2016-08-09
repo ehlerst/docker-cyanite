@@ -1,6 +1,6 @@
 logging:
   level: debug
-  condole: true
+  console: true
   files:
     - "/var/log/supervisor/cyanite-log.log"
 input:
