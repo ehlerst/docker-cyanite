@@ -1,9 +1,12 @@
 version: "2"
 services:
+  cyanite-cassandra:
+    hostname: cyanite-cassandra
+    image: cassandra:3
   cyanite:
     hostname: cyanite
     build: .
-    image: greeninja/docker-cyanite
+    image: tehlers/docker-cyanite
     ports:
       - "8080:8080"
       - "8888:8888"
@@ -12,9 +15,6 @@ services:
       MAX_HEAP_SIZE: 512m
       CASSANDRA_HOST: cyanite-cassandra
     depends_on:
-     - cassandra
+     - cyanite-cassandra
     links:
-     - cassandra
-   cassandra:
-     hostname: cyanite-cassandra
-     image: cassandra
+     - cyanite-cassandra

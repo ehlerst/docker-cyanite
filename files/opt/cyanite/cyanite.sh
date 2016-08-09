@@ -4,7 +4,13 @@ if [ -f /etc/default/cyanite ]; then
     . /etc/default/cyanite
 fi
 
-# cat /opt/cyanite/schema.cql | cqlsh ${CASSANDRA_HOST}
+until nc -z ${CASSANDRA_HOST} 9042; do
+    echo "$(date) - waiting for cassandra..."
+    sleep 1
+done
+
+cat /opt/cyanite/schema.cql | cqlsh ${CASSANDRA_HOST}
+
 
 CYANITE_VERSION="0.5.1"
 
