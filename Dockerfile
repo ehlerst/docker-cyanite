@@ -22,11 +22,11 @@ COPY files/etc/supervisor/conf.d/ /etc/supervisor/conf.d/
 COPY files/etc/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 ADD files/srv /srv
 
-RUN pip install graphite-api && \
-    pip install cyanite && \
-    pip install gunicorn && \
-    pip install cyanite-utils && \
-    chmod 777 /opt/cyanite -R
+RUN pip install graphite-api
+RUN pip install cyanite
+RUN pip install gunicorn
+RUN pip install cyanite-utils
+RUN chmod 777 /opt/cyanite -R
 
 EXPOSE 2003 8080 8888
 
